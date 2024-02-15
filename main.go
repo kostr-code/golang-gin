@@ -31,6 +31,7 @@ func main() {
 
 func GetUni(c *gin.Context) {
 	c.Header("Content-Type", "application/json")
+	c.Header("Access-Control-Allow-Origin", "*")
 	c.JSON(http.StatusOK, gin.H{
 		"Name":     "Гуап",
 		"EngName":  "SUAI",
