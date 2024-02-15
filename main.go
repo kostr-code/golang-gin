@@ -12,7 +12,7 @@ func main() {
 	router := gin.Default()
 
 	// Serve frontend static files
-	router.Use(static.Serve("/", static.LocalFile("./views", true)))
+	router.Use(static.Serve("/", static.LocalFile("./client", true)))
 
 	// Setup route group for the API
 	api := router.Group("/api")
@@ -22,17 +22,20 @@ func main() {
 				"message": "pong",
 			})
 		})
-		api.GET("/jokes", JokeHandler)
+		api.GET("/uni", GetUni)
 		api.POST("/jokes/like/:jokeID", LikeJoke)
 	}
 
 	router.Run(":3000")
 }
 
-func JokeHandler(c *gin.Context) {
+func GetUni(c *gin.Context) {
 	c.Header("Content-Type", "application/json")
 	c.JSON(http.StatusOK, gin.H{
-		"message": "Jokes handler not implemented yet",
+		"Name":     "Гуап",
+		"EngName":  "SUAI",
+		"Fullname": "Государственный Университет Аэрокосмического Приборостроения",
+		"Photo":    "./photos/SUAI.jpeg",
 	})
 }
 
