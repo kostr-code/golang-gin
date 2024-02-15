@@ -36,7 +36,7 @@ func GetUni(c *gin.Context) {
 		"Name":     "Гуап",
 		"EngName":  "SUAI",
 		"Fullname": "Государственный Университет Аэрокосмического Приборостроения",
-		"Photo":    "./photos/SUAI.jpeg",
+		"Photo":    "/SUAI.jpeg",
 	})
 }
 

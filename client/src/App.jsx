@@ -23,6 +23,7 @@ function App() {
             <p>EngName: {info.EngName}</p>
             <p>Fullname: {info.Fullname}</p>
             <p>Name: {info.Name}</p>
+            <p>Name: {info.Photo}</p>
             <img src={info.Photo} alt="card" />
           </>
         )}
