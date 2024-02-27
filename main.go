@@ -28,6 +28,7 @@ type UNI struct {
 	City          string `json:"city"`
 	Main_language string `json:"main_language"`
 	Avg_price     string `json:"avg_price"`
+	Photo         string `json:"photo"`
 }
 
 func main() {
@@ -58,18 +59,18 @@ func GetUni(c *gin.Context) {
 	//data := OpenDB()
 
 	var uni = []UNI{
-		{Name: "ГУАП", ID: 1, Location: "not found", Established: "1941", Country: "Россия", City: "Санкт-Петербург", Main_language: "Русский", Avg_price: "100000"},
-		{Name: "ИТМО", ID: 2, Location: "not found", Established: "1985", Country: "Россия", City: "Санкт-Петербург", Main_language: "Русский", Avg_price: "200000"},
-		{Name: "ВШЭ", ID: 3, Location: "not found", Established: "1995", Country: "Россия", City: "Санкт-Петербург", Main_language: "Русский", Avg_price: "250000"},
-		{Name: "ГУТ", ID: 4, Location: "not found", Established: "1937", Country: "Россия", City: "Санкт-Петербург", Main_language: "Русский", Avg_price: "135000"},
-		{Name: "ГАУ", ID: 5, Location: "not found", Established: "1869", Country: "Россия", City: "Санкт-Петербург", Main_language: "Русский", Avg_price: "88000"},
-		{Name: "ГЭУ", ID: 6, Location: "not found", Established: "1922", Country: "Россия", City: "Санкт-Петербург", Main_language: "Русский", Avg_price: "190000"},
+		{Name: "ГУАП", ID: 1, Location: "not found", Established: "1941", Country: "Россия", City: "Санкт-Петербург", Main_language: "Русский", Avg_price: "100000", Photo: "/SUAI.jpeg"},
+		{Name: "ИТМО", ID: 2, Location: "not found", Established: "1985", Country: "Россия", City: "Санкт-Петербург", Main_language: "Русский", Avg_price: "200000", Photo: "/ITMO.jpeg"},
+		{Name: "ВШЭ", ID: 3, Location: "not found", Established: "1995", Country: "Россия", City: "Санкт-Петербург", Main_language: "Русский", Avg_price: "250000", Photo: "/HSE.jpeg"},
+		{Name: "ГУТ", ID: 4, Location: "not found", Established: "1937", Country: "Россия", City: "Санкт-Петербург", Main_language: "Русский", Avg_price: "135000", Photo: "/GUT.jpeg"},
+		{Name: "ГАУ", ID: 5, Location: "not found", Established: "1869", Country: "Россия", City: "Санкт-Петербург", Main_language: "Русский", Avg_price: "88000", Photo: "/GAU.jpeg"},
+		{Name: "ГЭУ", ID: 6, Location: "not found", Established: "1922", Country: "Россия", City: "Санкт-Петербург", Main_language: "Русский", Avg_price: "190000", Photo: "/GEU.jpeg"},
 	}
 
 	// for data.Next() {
 	// 	var row UNI
 	// 	//log.Println(data)
-	// 	if err := data.Scan(&row.Name, &row.ID, &row.Location, &row.Established, &row.Country, &row.City, &row.Main_language, &row.Avg_price); err != nil {
+	// 	if err := data.Scan(&row.Name, &row.ID, &row.Location, &row.Established, &row.Country, &row.City, &row.Main_language, &row.Avg_price, &row.Photo); err != nil {
 	// 		log.Println("Есть несоответствия: ")
 	// 		log.Println(err)
 	// 	} else {
