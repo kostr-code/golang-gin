@@ -1,0 +1,12 @@
+.search {
+  width: 100%;
+  height: 60px;
+  border-radius: 15px;
+  border: 2px dashed #202020;
+  padding-left: 30px;
+  margin: 100px auto 80px auto;
+}
+
+.search:focus {
+  border: 2px dashed #ff34f7;
+}

@@ -1,9 +1,12 @@
 .main {
   max-width: 1280px;
+  margin: 90px auto;
+}
+
+.firstcontainer {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  margin: 110px auto;
 }
 
 .headings {
@@ -25,5 +28,11 @@
 }
 
 .mainPhoto {
-  width: 700px;
+  width: 800px;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
