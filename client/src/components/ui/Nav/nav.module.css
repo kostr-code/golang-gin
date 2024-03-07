@@ -1,0 +1,25 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 40px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #202020;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(7px);
+}
+
+.logo {
+  font-size: 1.5rem;
+  text-decoration: underline;
+  font-style: italic;
+}
+
+.profile {
+  width: 60px;
+}
